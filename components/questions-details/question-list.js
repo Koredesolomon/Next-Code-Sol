@@ -24,13 +24,10 @@ function QuestionList(props) {
                 <p>LinkedIn</p></button>
             </div>
             <ul className={styles.list}>
-                {items.map(event => 
+                {items?.map(event => 
                 <QuestionItem
                     key={event.id}
-                    id={event.id} 
-                    name={event.name} 
-                    date={event.date}
-                    question={event.question} 
+                    question={event} 
                     />
                     )}
                     <div className='flex flex-row justify-between'>

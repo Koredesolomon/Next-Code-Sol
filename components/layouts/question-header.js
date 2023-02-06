@@ -1,5 +1,4 @@
 import Button from "../ui/button";
-import styles from './question-header.module.css'
 
 function QuestionHeader() {
     return (

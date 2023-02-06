@@ -1,10 +1,14 @@
 import { formatDistanceToNow } from 'date-fns'
-import { Fragment } from 'react';
+import { Fragment, useMemo } from 'react';
 import { Icon } from '@iconify/react';
+import Link from 'next/link';
 
 function QuestionItem(props) {
-    const { name, date, question } = props;
-    const readableDate = formatDistanceToNow(new Date(date), {addSuffix: true})
+    const { datePosted, content, id, user } = props.question;
+
+    const readableDate = useMemo(() => {
+        return formatDistanceToNow(new Date(datePosted), {addSuffix: true})
+    }, [datePosted])
 
     return (
         <Fragment>
@@ -19,18 +23,18 @@ function QuestionItem(props) {
             <div className="text-[#9a3412] font-extrabold p-1">views</div>
         </div>
         <div className="flex flex-col gap-3 p-2">
-            <div className="flex flex-row justify-between">
-                <div className="">
+            <div className="flex flex-row justify-between ">
+                <div>
                 <Icon icon="material-symbols:account-circle-outline" fontSize={50} />
-                    {name}
+                    {user?.firstname} {user?.lastname}
                 </div>
                 <div className="text-[gray]">
                     <time>{readableDate}</time>
                 </div>
             </div>
-            <div className="flex-wrap text-[blue]">
-                {question}
-            </div>
+            <Link className="flex-wrap " href={`questions/${id}`}>
+                <p dangerouslySetInnerHTML={{__html: content}} ></p>
+            </Link>
             <div className="flex flex-row justify-evenly gap-2">
                 <Icon icon="heroicons:heart" fontSize={40} className='text-[#5b21b6] rounded-2xl bg-[#e9d5ff] p-2' />
                 <Icon icon="heroicons:chat-bubble-oval-left-ellipsis" fontSize={40} className='rounded-2xl bg-[#e9d5ff] p-2 text-[#5b21b6]'/>

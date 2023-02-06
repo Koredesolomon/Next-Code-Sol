@@ -15,6 +15,7 @@ function Login() {
 
   function submitHandler(event) {
     event.preventDefault();
+    console.log(EmailInputref, PasswordInputref)
     const enteredEmail = EmailInputref.current.value;
     const enteredPassword = PasswordInputref.current.value;
 
@@ -73,5 +74,4 @@ function Login() {
     </Layout>
   );
 }
-
 export default Login;

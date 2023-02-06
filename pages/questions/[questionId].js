@@ -39,9 +39,9 @@ function GetQuestionById() {
             <div className="flex flex-col flex-wrap items-center text-xl rounded-sm">
                 <QuestionItem
                 id={event.id} 
-                name={event.name}
-                date={event.date}
-                question={event.question} />
+                name={event.userId.firstnam}
+                date={event.datePosted}
+                question={event.content} />
                 <div className="font-extrabold text-sm mt-16 mr-96">
                     <p>View Answers</p>
                 </div>
