@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Satisfy&display=swap');
+
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    height: 5rem;
+  }
+
+  .logo {
+    font-size: 1rem;
+    color: white;
+   font-family: 'Satisfy', cursive;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #201E20;
+  }
+  
+  .logo a {
+    text-decoration: none;
+    color: #4831D4;
+  }
+  
+  .navigation a {
+    text-decoration: none;
+    color: #74dacc;
+    font-size: 1rem;
+  }
+
+  .btn {
+    font: inherit;
+    padding: 0.5rem 1.0rem;
+    cursor: pointer;
+    border-radius: 30px;
+    background-color: #317773;
+    color: white;
+    border: 1px solid;
+    margin: 0 1rem;
+  }
+  
+  .btn:hover {
+    background-color: #fff;
+    border-color: #9c1458;
+  }
+  
+  .btn--alt {
+    background-color: transparent;
+    color: #800040;
+  }
+  
+  .btn--alt:hover {
+    background-color: #f8dae9;
+  }
+
+  .send {
+    font: inherit;
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+    border-radius: 30px;
+    background-color:  #FCF6F5FF;
+    color: black;
+    border: 1px solid ;
+    margin: 0 1rem;
+  }
+  
+  .send:hover {
+    background-color: #fff;
+    border-color: #9c1458;
+  }
+  
+  .send--alt {
+    background-color: transparent;
+    color: #800040;
+  }
+  
+  .send--alt:hover {
+    background-color: #f8dae9;
+  }
+  
+  @media (min-width: 768px) {
+    .logo {
+      font-size: 2.5rem;
+    }
+  
+    .navigation a {
+      font-size: 1rem;
+      font-family: 'Satisfy', cursive;
+    }
+  }

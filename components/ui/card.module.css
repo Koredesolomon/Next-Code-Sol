@@ -1,0 +1,11 @@
+.card {
+  display: flex;
+  flex-direction: column;
+    background-image: url('../../public/images/ours.webp');
+    height: 550px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+   margin-inline: 20rem;
+  }
