@@ -1,14 +1,14 @@
 import Link from "next/link";
-import styles from './button.module.css'
+import { QuestionForm } from '@/components/question/QuestionForm';
 
 function Button(props) {
-    if(props.link){
-        return (
-            <Link className= {styles.btn} href={props.link}>{props.children}</Link>
-        );
-    }
+    // if(props.link){
+    //     return (
+    //         <Link className= {styles.btn} href={QuestionForm}>{props.children}</Link>
+    //     );
+    // }
     return (
-        <button className="bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 rounded-xl p-4" onClick={props.onClick}>{props.children}</button>
+        <button className="bg-neutral-500 hover:bg-neutral-700 rounded-sm p-2 mt-0 text-white" onClick={QuestionForm}>{props.children}</button>
     )
 }
 export default Button;

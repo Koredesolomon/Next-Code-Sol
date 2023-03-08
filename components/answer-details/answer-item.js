@@ -4,8 +4,8 @@ import { Icon } from '@iconify/react';
 import Link from 'next/link';
 
 
-function QuestionItem(props) {
-    const { datePosted, content, id, user } = props.question;
+function AnswerItem(props) {
+    const { datePosted, reply, questionId, user } = props.answer;
 
     const readableDate = useMemo(() => {
         return formatDistanceToNow(new Date(datePosted), {addSuffix: true})
@@ -13,9 +13,9 @@ function QuestionItem(props) {
 
     return (
         <Fragment>
-        <div className={`bg-white container shrink w-auto h-auto p-2 ${props.shadow ? "border-2 border-slate-300": ""}`}>
+        <div className="flex flex-col bg-white flex-wrap container mx-auto h-min p-2 border-2 border-slate-300">
                 <div className="flex flex-row justify-between">
-                    <Link href={`questions/user/${id}`} className='text-[gray] flex flex-row'>
+                    <Link href={'/'} className='text-[gray] flex flex-row'>
                     <Icon icon="material-symbols:account-circle-outline" fontSize={30}/>
                         {user?.firstname} {user?.lastname}
                     </Link>
@@ -23,9 +23,7 @@ function QuestionItem(props) {
                         <time>{readableDate}</time>
                     </div>
                 </div>
-                <Link className="flex justify-center flex-wrap" href={`questions/${id}`}>
-                    <div className={`text-xl px-20 ${props.truncate ? "truncate" : "break-all"}`} dangerouslySetInnerHTML={{__html: content}} ></div>
-                </Link>
+                    <div className='break-all px-20' dangerouslySetInnerHTML={{__html: reply}} ></div>
                 <div className="flex flex-row justify-between gap-2 mt-7">
                     <div className='flex flex-row gap-2'>
                         <Icon icon="bx:like" fontSize={40} className='rounded-2xl bg-[#e9d5ff] p-2 text-[#5b21b6]'/>
@@ -40,4 +38,4 @@ function QuestionItem(props) {
     )
 }
 
-export default QuestionItem;
+export default AnswerItem;

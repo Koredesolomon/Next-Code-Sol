@@ -1,12 +1,10 @@
 import Layout from "@/components/layout/layout";
-import QuestionHeader from "@/components/layouts/question-header";
 import Footer from "@/components/questions-details/footer";
 import QuestionList from "@/components/questions-details/question-list";
 import { Fragment, useEffect, useState } from "react";
 import useApi from '@/hooks/useApi';
 
 function AllQuestionsPage() {
-    const [questions, setQuestions] = useState([]);
     const {data, request} = useApi();
 
     useEffect(() => {
@@ -16,12 +14,11 @@ function AllQuestionsPage() {
     return (
         <Fragment>
         <Layout>
-        <QuestionHeader/>
+        <h2 className="flex justify-center mt-7 text-2xl text-black font-extrabold">All Questions</h2>
         <QuestionList items={data}/>
         <Footer/>
         </Layout>
         </Fragment>
     )
 }
-
 export default AllQuestionsPage;

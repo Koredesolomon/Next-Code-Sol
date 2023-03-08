@@ -8,6 +8,7 @@ import { Icon } from '@iconify/react';
 import Footer from "@/components/questions-details/footer";
 
 function GetUserQuestions(props) {
+
     const router = useRouter();
     const  eventId = router.query.userId;
     const event =  getQuestionsByuserId(eventId);

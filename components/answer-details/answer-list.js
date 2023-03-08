@@ -1,15 +1,14 @@
-import QuestionItem from "./question-items";
+import AnswerItem from "./answer-item";
 
-function QuestionList(props) {
-    const {items} = props;
+function AnswerList(props) {
+    const {body} = props;
+
     return (
             <ul className='flex flex-col p-20 flex-wrap gap-3 text-center'>
-                {items?.map(event => 
-                <QuestionItem
-                    key={event.id}
-                    question={event} 
-                    shadow = {true}
-                    truncate ={true}
+                {body?.map(answer => 
+                <AnswerItem
+                key={answer.id}
+                   answer ={answer} 
                     />
                     )}
                     <div className='flex flex-row justify-evenly'>
@@ -19,4 +18,4 @@ function QuestionList(props) {
             </ul>
     )
 }
-export default QuestionList;
+export default AnswerList;

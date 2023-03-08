@@ -1,7 +1,11 @@
-import QuestionForm from '@/components/question/QuestionForm';
-import { useState } from 'react';
+import { Fragment, useState } from 'react';
 import useAuth from '@/hooks/useAuth';
 import usePostQuery from '@/hooks/usePostQuery';
+import MainHeader from '@/components/layout/main-header';
+import Footer from '@/components/questions-details/footer';
+import { Icon } from '@iconify/react';
+import  TextBox  from '@/components/question/Textbox';
+
 
 const AskQuestion = () => {
     const [question, setQuestion] = useState("");
@@ -14,11 +18,24 @@ const AskQuestion = () => {
         })
     }
     return (
-        <div className='relative'>
-            <QuestionForm text={question} onChange={setQuestion} />
-            <button className="p-4 bg-gray block mt-3" onClick={submit}>Submit</button>
+        <div className='flex flex-col gap-5 justify-center h-full'>
+            <MainHeader/>
+            <div className='flex flex-col mt-24 mx-auto'>
+                <div className='flex flex-col justify-center'>
+                    <h2 className='p-7 text-center text-lg'>Drop your Questions and Answers below</h2>
+                    <Icon icon="material-symbols:arrow-downward" fontSize={30} color='blue' className='animate-bounce w-10 h-10'/>
+                </div>
+                <div className='flex flex-col gap-6'>
+                    <TextBox text={question} onChange={setQuestion}/>
+                </div>
+                <button className="dark:bg-slate-800 text-white bg-gradient-to-r from-slate-900 to-gray-500 focus-within:shadow-lg rounded-sm p-2 mt-24 w-fit  "
+                     onClick={submit}>Submit</button>
+            </div>
+            <div className='mt-28'>
+            <Footer/>
+            </div>
         </div>
     )
 }
 
-export default AskQuestion
+export default AskQuestion;

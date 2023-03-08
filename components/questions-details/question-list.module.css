@@ -1,9 +1,0 @@
-.list {
-    width: inherit;
-    max-width: 40rem;
-    margin: 5rem auto;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    flex-wrap: wrap;
-  }

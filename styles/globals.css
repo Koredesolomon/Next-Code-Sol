@@ -8,6 +8,7 @@
     @apply h-full;
   }
   html,
+  
   body {
     @apply h-full;
     @apply w-full;
@@ -45,4 +46,33 @@ input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active{
   -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+.container {
+  margin: auto;
+  width: 95%;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 80%;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 75%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 70%;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    width: 60%;
+  }
 }

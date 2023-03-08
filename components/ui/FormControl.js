@@ -9,6 +9,7 @@ const FormControl = forwardRef(({label, inputType, id, icon = undefined}, ref) =
         <div className="mb-4 flex items-center rounded-md gap-1 p-2 border-[2px] border-solid border-[#9CB1BA] focus-within:border-[#C9E2FA]">
           {icon && <Icon icon={icon} />}
           <input
+          value= {enteredPassword}
             type={inputType}
             required
             id={id}
