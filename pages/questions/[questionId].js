@@ -59,15 +59,6 @@ function GetQuestionById() {
                         <p className="flex justify-center w-full">View Answers</p>
                          <AnswerList body={answers}/>
                     </div>
-                    {/* <div className="flex flex-row justify-between">
-                    <Link href={`questions/user/${id}`} className='text-[gray] flex flex-row'>
-                    <Icon icon="material-symbols:account-circle-outline" fontSize={30}/>
-                        {user?.firstname} {user?.lastname}
-                    </Link>
-                    <div className="text-[gray]">
-                        <time>{readableDate}</time>
-                    </div>
-                    </div> */}
                 </div>
                 <div className="mt-24 flex flex-col gap-9 justify-between">
                     <div className="mx-auto">
