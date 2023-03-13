@@ -38,7 +38,6 @@ const useAuth = () => {
         isLoggedIn,
         getUser
     }
-
 }
 
 export default useAuth

@@ -12,18 +12,18 @@ function MainHeader() {
         <Link href="/questions"><h2 className="text-xl font-normal">Code<span className="text-2xl font-semibold">Sol</span></h2></Link>
       </div>
       <nav className='mr-20'>
-        <ul className='flex flex-row gap-10'>
+        <ul className='flex flex-row gap-4'>
           <Link href='/questions/ask/' className="bg-neutral-500 hover:bg-neutral-700 rounded-sm p-2 mt-0 text-white">Post Question</Link>
           {isLoggedIn() ? (
             <div>
               <p>Welcome {getUser().firstname}</p>
             </div>
           ) : (
-            <li className="flex flex-row gap-1 justify-evenly">
-                <Link href="/login" className="dark:bg-slate-800 text-white bg-gradient-to-l from-purple-500 to-indigo-500 to-transparent rounded-sm p-2">
+            <li className="flex flex-row justify-evenly group">
+                <Link href="/login" className="p-2 group-hover:text-white hover:bg-gray-700 rounded-lg">
                   Log In
                 </Link>
-                <Link href="/register" className="dark:bg-slate-800 text-white bg-gradient-to-r from-cyan-900 to-blue-500 focus-within:shadow-lg rounded-sm p-2">
+                <Link href="/register" className="p-2 group-hover:text-white hover:bg-gray-900 rounded-lg">
                   Sign Up
                 </Link>
             </li>
@@ -32,7 +32,6 @@ function MainHeader() {
       </nav>
     </header>
   </div>
-    
   );
 }
 

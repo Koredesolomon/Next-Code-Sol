@@ -28,7 +28,7 @@ function ReplyForm({onReply}) {
     return (
         <div>
             <TextBox onChange={setAnswer}/>
-            <button className="dark:bg-slate-800 text-white bg-gradient-to-r from-slate-900 to-gray-500 focus-within:shadow-lg rounded-sm p-2 mt-24 w-fit  "
+            <button className="bg-blue-900 text-white text-lg hover:bg-blue-500 p-3 mt-24 w-fit transition ease-in-out delay-100 rounded-xl"
             onClick={submit}>Submit</button>
         </div>  
     )

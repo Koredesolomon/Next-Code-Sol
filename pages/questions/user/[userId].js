@@ -1,4 +1,4 @@
-import { getQuestionsByuserId } from "@/dummy-data";
+
 import { useRouter } from "next/router";
 import ErrorAlert from "@/components/ui/error-alert";
 import Layout from "@/components/layout/layout";
@@ -11,7 +11,7 @@ function GetUserQuestions(props) {
 
     const router = useRouter();
     const  eventId = router.query.userId;
-    const event =  getQuestionsByuserId(eventId);
+    // const event =  getQuestionsByuserId(eventId);
 
     const { name, location } = props;
 
@@ -52,7 +52,7 @@ function GetUserQuestions(props) {
                     <Icon icon="ic:outline-arrow-drop-down-circle" fontSize={22}/>
                 </button>
             </div>
-            <QuestionList items={event} />
+            {/* <QuestionList items={event} /> */}
             <Footer/>
         </div>
         </Layout>
